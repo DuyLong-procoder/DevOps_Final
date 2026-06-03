@@ -1,0 +1,36 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  font-family: Arial, sans-serif;
+  background: #f5f7fb;
+}
+
+.hero {
+  max-width: 720px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #444;
+}
+
+.card {
+  margin-top: 32px;
+  padding: 24px;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.error {
+  color: red;
+}
