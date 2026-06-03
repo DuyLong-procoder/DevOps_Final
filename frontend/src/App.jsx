@@ -18,33 +18,77 @@ function App() {
   }, []);
 
   return (
-    <main className="container">
-      <section className="hero">
-        <h1>DevOps Demo App</h1>
+    <div className="app">
+      <div className="background-blur blur-1"></div>
+      <div className="background-blur blur-2"></div>
 
-        <p>
-          React Frontend + Node.js Backend + PostgreSQL + GitHub Actions +
-          Render Deploy
-        </p>
+      <main className="container">
+        <section className="hero">
+          <span className="badge">🚀 DevOps Final Project</span>
 
-        <div className="card">
-          <h2>API Response</h2>
+          <h1>
+            React + Node.js + PostgreSQL
+            <span> CI/CD Deployment Pipeline</span>
+          </h1>
 
-          {apiData && (
-            <>
-              <p>{apiData.message}</p>
-              <small>
-                Database time: {apiData.databaseTime}
-              </small>
-            </>
-          )}
+          <p className="subtitle">
+            Modern DevOps architecture using React Frontend, Express Backend,
+            PostgreSQL Database, GitHub Actions CI Pipeline and Render Cloud
+            Deployment.
+          </p>
 
-          {error && <p className="error">{error}</p>}
+          <div className="tech-stack">
+            <div className="tech">React</div>
+            <div className="tech">Node.js</div>
+            <div className="tech">PostgreSQL</div>
+            <div className="tech">GitHub Actions</div>
+            <div className="tech">Render</div>
+          </div>
 
-          {!apiData && !error && <p>Loading API...</p>}
-        </div>
-      </section>
-    </main>
+          <div className="card">
+            <h2>🔗 API Connection Status</h2>
+
+            {apiData && (
+              <>
+                <div className="status success">
+                  ✅ Backend connected successfully
+                </div>
+
+                <div className="info-grid">
+                  <div className="info-item">
+                    <h3>Message</h3>
+                    <p>{apiData.message}</p>
+                  </div>
+
+                  <div className="info-item">
+                    <h3>Database Time</h3>
+                    <p>{apiData.databaseTime}</p>
+                  </div>
+                </div>
+              </>
+            )}
+
+            {error && (
+              <div className="status error">
+                ❌ Cannot connect to backend API
+              </div>
+            )}
+
+            {!apiData && !error && (
+              <div className="status loading">
+                ⏳ Loading API data...
+              </div>
+            )}
+          </div>
+
+          <div className="footer">
+            <p>
+              Built with ❤️ for DevOps Final Assignment
+            </p>
+          </div>
+        </section>
+      </main>
+    </div>
   );
 }
 
