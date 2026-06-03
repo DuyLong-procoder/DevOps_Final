@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+      - feature-ux
+
   pull_request:
     branches:
       - main
