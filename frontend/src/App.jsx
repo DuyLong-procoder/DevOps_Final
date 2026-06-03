@@ -24,7 +24,7 @@ function App() {
 
       <main className="container">
         <section className="hero">
-          <span className="badge">🚀 DevOps Final Project v2</span>
+          <span className="badge">🚀 DevOps Final Project v3</span>
 
           <h1>
             React + Node.js + PostgreSQL
